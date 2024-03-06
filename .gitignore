@@ -15,3 +15,5 @@ target/
 
 # Dependencies managed by Maven or other build tools
 /lib/
+
+src/main/webapp/css/bootstrap.min.css
