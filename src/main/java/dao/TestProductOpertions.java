@@ -1,6 +1,9 @@
 package dao;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -37,17 +40,34 @@ class TestProductOpertions {
 
 	@Test
 	void testKeywordSearch() {
-		fail("Not yet implemented");
+		final String key="%asu%";
+		List<Product> table=product.KeywordSearch(key);
+		assertEquals("List size should be greater than 0", true, table.size() > 0);
 	}
 
 	@Test
 	void testEditProduct() {
-		fail("Not yet implemented");
+		final String DESIGNATION="Asus x77";
+		
+		Product p=new Product();
+		p.setId(1l);
+		p.setDesignation(DESIGNATION);
+		p.setPrix(777d);
+		p.setQuantite(50);
+		Product newProduct=product.EditProduct(p);
+		
+		assertEquals(DESIGNATION,newProduct.getDesignation());
+		
+		
 	}
 
 	@Test
 	void testDeleteProduct() {
-		fail("Not yet implemented");
+		final long ID=5;
+		
+		boolean Resultat=product.DeleteProduct(ID);
+		assertEquals("Product it's not deleted",true,Resultat);
+		
 	}
 
 }

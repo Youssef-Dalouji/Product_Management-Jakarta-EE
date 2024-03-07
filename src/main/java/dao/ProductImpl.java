@@ -58,8 +58,11 @@ public class ProductImpl implements ProductInterface {
 				p.setDesignation(rs.getString("designation"));
 				p.setPrix(rs.getDouble("prix"));
 				p.setQuantite(rs.getInt("quantite"));
+				System.out.println(p.getId());
 				table.add(p);
 			}
+			ps.close();
+			rs.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -79,6 +82,7 @@ public class ProductImpl implements ProductInterface {
 			ps.setInt(3, p.getQuantite());
 			ps.setLong(4, p.getId());
 			ps.executeUpdate();
+			ps.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -86,15 +90,18 @@ public class ProductImpl implements ProductInterface {
 	}
 
 	@Override
-	public void DeleteProduct(Long id) {
+	public boolean DeleteProduct(Long id) {
 		Connection connection =SingletonConnection.getConnection();
 		try {
 			PreparedStatement ps=connection.prepareStatement(DELETEPRODUCT);
 			ps.setLong(1, id);
 			ps.executeUpdate();
+			ps.close();
+			return true;
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		return false;
 		
 	}
 

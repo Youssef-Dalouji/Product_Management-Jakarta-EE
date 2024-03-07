@@ -12,7 +12,7 @@ public interface ProductInterface {
 	
 	public Product EditProduct (Product p);
 	
-	public void DeleteProduct (Long id);
+	public boolean DeleteProduct (Long id);
 	
 	
 }
