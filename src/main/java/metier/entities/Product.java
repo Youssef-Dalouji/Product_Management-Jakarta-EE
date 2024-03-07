@@ -9,10 +9,12 @@ public class Product implements Serializable {
 	private double prix;
 	private int quantite;
 	
+	
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", designation=" + designation + ", prix=" + prix + ", quantite=" + quantite + "]";
+		return "Product [designation=" + designation + ", prix=" + prix + ", quantite=" + quantite + "]";
 	}
+	
 	public long getId() {
 		return id;
 	}
@@ -37,4 +39,6 @@ public class Product implements Serializable {
 	public void setQuantite(int quantite) {
 		this.quantite = quantite;
 	}
+	
+	
 }

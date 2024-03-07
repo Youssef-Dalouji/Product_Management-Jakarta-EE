@@ -17,4 +17,4 @@ target/
 /lib/
 src/main/webapp/WEB-INF/lib/
 
-src/main/webapp/css/bootstrap.min.css
+src/main/webapp/css/
