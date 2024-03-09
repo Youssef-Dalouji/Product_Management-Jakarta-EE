@@ -14,7 +14,7 @@
     	</div>
     	
     	<div class="body">
-    		<h1>Hello World</h1>
+    		<h1>Product Management</h1>
     	</div>
     	
     	<div class="footer">

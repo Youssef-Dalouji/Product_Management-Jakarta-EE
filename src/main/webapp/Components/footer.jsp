@@ -1,1 +1,1 @@
-<p>&copy; <%= new java.util.Date().getYear() + 1900 %> Your Company Name. All rights reserved.</p>
+<p>&copy; <%= new java.util.Date().getYear() + 1900 %> Product Management. All rights reserved.</p>
