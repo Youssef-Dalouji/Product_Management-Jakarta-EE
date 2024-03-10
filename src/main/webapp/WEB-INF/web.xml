@@ -3,7 +3,7 @@
   <display-name>Product_Management-Jakarta-EE</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index_12369844x.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
@@ -17,6 +17,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ProductServelt</servlet-name>
-    <url-pattern>/ProductServelt</url-pattern>
+    <url-pattern>*.php</url-pattern>
   </servlet-mapping>
 </web-app>

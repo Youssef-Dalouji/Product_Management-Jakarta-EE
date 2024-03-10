@@ -7,10 +7,10 @@
    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="addProduct.jsp">Add</a>
+          <a class="nav-link active" aria-current="page" href="addProduct.php">Add</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="product.jsp">Display</a>
+          <a class="nav-link active" href="product.php">Display</a>
         </li>
       </ul>
     </div>

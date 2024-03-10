@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Product Management</title>
-<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 	<div class="principale d-flex flex-column justify-content-between">
@@ -17,7 +17,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
 					<div class="input-group mb-3">
-						<form class="input-group mb-3" action="product.jsp" method="get">
+						<form class="input-group mb-3" action="product.jsp" method="post">
 							<input type="text" class="form-control" placeholder="Search"
 							aria-label="Search" aria-describedby="button-addon2">
 						<button class="btn btn-outline-secondary" type="submit"
