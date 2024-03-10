@@ -20,6 +20,18 @@ public class ProductServelt extends HttpServlet {
 			request.getRequestDispatcher("/WEB-INF/View/addProduct.jsp").forward(request, response);
 			return;
 	    }
+		if (path.equals("/displayProduct.php") && request.getMethod().equals("GET")) {
+			request.getRequestDispatcher("/WEB-INF/View/displayProduct.jsp").forward(request, response);
+			return;
+	    }
+		if (path.equals("/editProduct.php") && request.getMethod().equals("GET")) {
+			request.getRequestDispatcher("/WEB-INF/View/editProduct.jsp").forward(request, response);
+			return;
+	    }
+		if (path.equals("/product.php") && request.getMethod().equals("GET")) {
+			request.getRequestDispatcher("/WEB-INF/View/product.jsp").forward(request, response);
+			return;
+	    }
 		response.sendError(HttpServletResponse.SC_NOT_FOUND);
 	}
 

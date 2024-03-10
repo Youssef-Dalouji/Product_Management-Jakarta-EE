@@ -17,7 +17,7 @@
     <div class="body container my-4">
         <div class="row justify-content-center">
             <div class="col-lg-6">
-                <form id="productForm" action="displayProduct.jsp" method="post">
+                <form id="productForm" action="displayProduct.php" method="post">
 				    <fieldset>
 				        <legend>Add Product</legend>
 				        <div class="mb-3">
