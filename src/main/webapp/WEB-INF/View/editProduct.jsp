@@ -22,19 +22,19 @@
 				        <legend>Edit Product</legend>
 				        <div class="mb-3">
 				            <label class="form-label">ID</label>
-				            <input readonly type="text" id="id" name="id" class="form-control" placeholder="ID">
+				            <input readonly type="text" id="id" name="id" value="${model.getId() }" class="form-control" placeholder="ID">
 				        </div>
 				        <div class="mb-3">
 				            <label class="form-label">Designation</label>
-				            <input type="text" id="designation" name="designation" class="form-control" placeholder="Designation">
+				            <input type="text" id="designation" name="designation" value="${model.getDesignation() }" class="form-control" placeholder="Designation">
 				        </div>
 				        <div class="mb-3">
 				            <label class="form-label">Prix</label>
-				            <input type="text" id="prix" name="prix" class="form-control" placeholder="Prix">
+				            <input type="text" id="prix" name="prix" class="form-control" value="${model.getPrix() }" placeholder="Prix">
 				        </div>
 				        <div class="mb-3">
 				            <label class="form-label">Quantite</label>
-				            <input type="text" id="quantite" name="quantite" class="form-control" placeholder="Quantite">
+				            <input type="text" id="quantite" name="quantite" value="${model.getQuantite() }" class="form-control" placeholder="Quantite">
 				        </div>
 				        <button type="submit" class="btn btn-dark">Edit</button>
 				    </fieldset>

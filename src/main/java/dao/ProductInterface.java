@@ -8,6 +8,8 @@ public interface ProductInterface {
 	
 	public Product save(Product p);
 	
+	public Product getProduct(Long id);
+	
 	public List<Product> KeywordSearch (String key);
 	
 	public Product EditProduct (Product p);

@@ -8,6 +8,7 @@ import metier.entities.Product;
 public class ProductImpl implements ProductInterface {
 	
 	private final String INSERTSTATEMENT="INSERT INTO PRODUCT (DESIGNATION,PRIX,QUANTITE) VALUES (?,?,?)";
+	private final String SELECTPRODUCTBYID="SELECT * FROM PRODUCT WHERE ID=?";
 	private final String IDSTATEMENT="SELECT MAX(ID) AS ID_MAX FROM PRODUCT";
 	private final String SELECTPRODUCT="SELECT * FROM PRODUCT WHERE DESIGNATION LIKE ?";
 	private final String UPDATEPRODUCT="UPDATE PRODUCT SET DESIGNATION=?,PRIX=?,QUANTITE=? WHERE ID=?";
@@ -41,6 +42,31 @@ public class ProductImpl implements ProductInterface {
 		}
 		return p;
 	}
+	
+	@Override
+	public Product getProduct(Long id) {
+		Connection connection=SingletonConnection.getConnection();
+		Product p=new Product();
+		
+		try {
+			PreparedStatement ps=connection.prepareStatement(SELECTPRODUCTBYID);
+			ps.setLong(1, id);
+			ResultSet rs=ps.executeQuery();
+			
+			while(rs.next()) {
+				p.setId(rs.getLong("id"));
+				p.setDesignation(rs.getString("designation"));
+				p.setPrix(rs.getDouble("prix"));
+				p.setQuantite(rs.getInt("quantite"));
+			}
+			ps.close();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return p;
+	}
 
 	@Override
 	public List<Product> KeywordSearch(String key) {
@@ -58,7 +84,6 @@ public class ProductImpl implements ProductInterface {
 				p.setDesignation(rs.getString("designation"));
 				p.setPrix(rs.getDouble("prix"));
 				p.setQuantite(rs.getInt("quantite"));
-				System.out.println(p.getId());
 				table.add(p);
 			}
 			ps.close();

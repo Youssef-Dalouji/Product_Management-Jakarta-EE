@@ -10,6 +10,18 @@ public class Product implements Serializable {
 	private int quantite;
 	
 	
+	public Product(long id, String designation, double prix, int quantite) {
+		super();
+		this.id = id;
+		this.designation = designation;
+		this.prix = prix;
+		this.quantite = quantite;
+	}
+	
+	public Product() {
+		
+	}
+
 	@Override
 	public String toString() {
 		return "Product [designation=" + designation + ", prix=" + prix + ", quantite=" + quantite + "]";

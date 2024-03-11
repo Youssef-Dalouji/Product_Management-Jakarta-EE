@@ -20,10 +20,10 @@
                 <div class="card text-bg-secondary mb-3">
                     <div class="card-header">Product</div>
                     <div class="card-body">
-                        <h5 class="card-title">Designation</h5>
-                        <p class="card-text">ID</p>
-                        <p class="card-text">Prix</p>
-                        <p class="card-text">Quantite</p>
+                        <h5 class="card-title">${model.getDesignation() }</h5>
+                        <p class="card-text">${model.getId() }</p>
+                        <p class="card-text">${model.getPrix() }</p>
+                        <p class="card-text">${model.getQuantite() }</p>
                     </div>
                 </div>
             </div>

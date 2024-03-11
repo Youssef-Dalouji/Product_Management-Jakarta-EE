@@ -37,6 +37,13 @@ class TestProductOpertions {
 		assertEquals(Resultat,p.toString());
 		
 	}
+	
+	@Test
+	void testGetProduct() {
+		final Long id=1l;
+		Product p=product.getProduct(id);
+		assertEquals(id,p.getId());
+	}
 
 	@Test
 	void testKeywordSearch() {
